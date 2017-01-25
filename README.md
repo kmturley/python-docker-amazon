@@ -34,6 +34,6 @@ Next run the images:
 
 ## Deployment
 
-Now zip your project using:
+Now deploy your project using:
 
-    git archive --format=zip HEAD > dev.zip
+    eb deploy
