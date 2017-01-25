@@ -1,0 +1,30 @@
+{
+  "name": "python-docker-amazon",
+  "version": "0.0.1",
+  "description": "An example Python app inside a Docker container, which deploys to Amazon Elastic Beanstalk.",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmturley/python-docker-amazon.git"
+  },
+  "keywords": [
+    "python",
+    "docker",
+    "amazon",
+    "elastic",
+    "beanstalk"
+  ],
+  "author": "kmturley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmturley/python-docker-amazon/issues"
+  },
+  "homepage": "https://github.com/kmturley/python-docker-amazon#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}

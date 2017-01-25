@@ -5,27 +5,27 @@ An example Python app inside a Docker container, which deploys to Amazon Elastic
 
 ## Installation
 
-First build the image:
+Install the Amazon Elastic Beanstalk Client
 
-    docker build -t python-docker-amazon .
+    brew install awsebcli
 
 
 ## Usage
 
-Run the server image using:
+Run the server locally using python:
 
-    docker run -it -p 3000:8080 python-docker-amazon
+    python application.py runserver -d
+
+Or run the full server environment using:
+
+    eb local run
 
 Then visit the address:
 
-    http://localhost:3000/
+    http://localhost:8080/
 
 
 ## Deployment
-
-Install the Amazon Elastic Beanstalk Client
-
-    brew install awsebcli
 
 Then run init and follow the steps to auth:
 
@@ -34,3 +34,11 @@ Then run init and follow the steps to auth:
 You can deploy your project to the cloud using:
 
     eb deploy
+
+
+## Docker (optional)
+
+If you like, you can use docker directly using:
+
+    docker build -t python-docker-amazon .
+    docker run -it -p 3000:8080 python-docker-amazon
