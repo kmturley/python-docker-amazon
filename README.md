@@ -5,7 +5,7 @@ An example Python app inside Docker containers, which runs on Amazon Elastic Bea
 
 ## Installation
 
-Install the AWS Elastic Beanstalk Client
+Install the Amazon Elastic Beanstalk Client
 
     pip install --upgrade --user awsebcli
 
@@ -17,6 +17,9 @@ Then run in terminal
 
     source ~/.bash_profile
 
+Now run the Amazon Elastic Beanstalk Client and follow the steps:
+
+    eb init
 
 ## Running
 
@@ -31,6 +34,6 @@ Next run the images:
 
 ## Deployment
 
-Now zip your project:
+Now zip your project using:
 
-    zip ../myapp.zip -r * .[^.]*
+    git archive --format=zip HEAD > dev.zip
