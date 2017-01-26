@@ -7,6 +7,8 @@
 # Backend
 backend/static
 backend/templates
+db.sqlite3
+*.pyc
 
 # Frontend
 bower_components
