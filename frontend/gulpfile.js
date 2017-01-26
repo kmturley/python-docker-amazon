@@ -26,7 +26,8 @@ gulp.task('js', function () {
         });
 });
 
-gulp.task('default', ['html', 'js']);
+gulp.task('build', ['html', 'js']);
+gulp.task('default', ['build', 'watch']);
 gulp.task('watch', function () {
     'use strict';
     gulp.watch([global.paths.src + global.paths.html], ['html']);
