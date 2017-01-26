@@ -5,8 +5,8 @@
 !.elasticbeanstalk/*.global.yml
 
 # Backend
-backend/static
-backend/templates
+static
+templates
 *.pyc
 db.sqlite3
 

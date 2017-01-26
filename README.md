@@ -42,4 +42,13 @@ If you like, you can use docker directly using:
 
     docker build -t python-docker-amazon .
     docker run -it -p 3000:8080 python-docker-amazon
-    sudo docker exec -i -t 77eeb1e49d5c /bin/bash
+
+To connect to the running container use:
+
+    sudo docker exec -i -t containerid /bin/bash
+
+## uWSGI (optional)
+
+Run nginx + uWSGI server directly:
+
+    uwsgi --http :8080 --module mysite.wsgi
