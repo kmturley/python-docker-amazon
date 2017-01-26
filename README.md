@@ -14,7 +14,8 @@ Install the Amazon Elastic Beanstalk Client
 
 Run the server locally using python:
 
-    python application.py runserver -d
+    cd backend/
+    python manage.py runserver
 
 Or run the full server environment using:
 
@@ -42,3 +43,4 @@ If you like, you can use docker directly using:
 
     docker build -t python-docker-amazon .
     docker run -it -p 3000:8080 python-docker-amazon
+    sudo docker exec -i -t 77eeb1e49d5c /bin/bash
