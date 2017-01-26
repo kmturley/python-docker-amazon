@@ -14,7 +14,6 @@ Install the Amazon Elastic Beanstalk Client
 
 Run the server locally using python:
 
-    cd backend/
     python manage.py runserver
 
 Or run the full server environment using:
