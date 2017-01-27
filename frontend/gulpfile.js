@@ -2,8 +2,8 @@ var gulp = require('gulp');
 
 global.paths = {
     src: 'src',
-    static: '../static',
-    templates: '../templates',
+    static: '../backend/static',
+    templates: '../backend/templates',
     js: '/**/*.{js,tpl}',
     html: '/**/*.html'
 };

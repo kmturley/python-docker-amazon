@@ -1,4 +1,4 @@
-# python-docker-amazon
+# python-docker-amazon (Flask)
 
 An example Python app inside a Docker container, which deploys to Amazon Elastic Beanstalk.
 
@@ -14,7 +14,12 @@ Install the Amazon Elastic Beanstalk Client
 
 Run the server locally using python:
 
-    python application.py runserver -d
+    python application.py runserver 0.0.0.0:8080
+
+Run the frontend locally using gulp:
+
+    cd frontend
+    gulp
 
 Or run the full server environment using:
 
@@ -42,3 +47,17 @@ If you like, you can use docker directly using:
 
     docker build -t python-docker-amazon .
     docker run -it -p 3000:8080 python-docker-amazon
+
+To connect to the running container use:
+
+    sudo docker exec -i -t containerid /bin/bash
+    cat /var/log/uwsgi/uwsgi.log
+
+## uWSGI (optional)
+
+Run nginx + uWSGI server directly:
+
+    virtualenv env
+    source env/bin/activate
+    pip install requirements.txt
+    uwsgi --http :8080 --wsgi-file backend/wsgi.py --master --processes 1 --threads 15 --uid uwsgi --gid uwsgi --logto2 uwsgi.log

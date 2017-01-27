@@ -1,5 +1,9 @@
+import os
 from flask import Flask, render_template, send_from_directory
-app = Flask(__name__)
+
+static_dir = os.path.abspath('backend/static')
+template_dir = os.path.abspath('backend/templates')
+app = Flask(__name__, static_folder=static_dir, template_folder=template_dir)
 
 @app.route('/')
 def index():
