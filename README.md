@@ -14,9 +14,14 @@ Install the Amazon Elastic Beanstalk Client
 
 Run the server locally using python:
 
-    python manage.py runserver
+    python manage.py runserver 0.0.0.0:8080
 
-Or run the full server environment using:
+Run the frontend locally using gulp:
+
+    cd frontend
+    gulp
+
+Or run the full server environment in Docker using:
 
     eb local run
 
