@@ -10,5 +10,5 @@ RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 RUN cd /var/app/frontend && npm install
 RUN cd /var/app/frontend && npm run build
 
-# Expose port 8080
+# Expose port
 EXPOSE 8080

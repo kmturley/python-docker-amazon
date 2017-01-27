@@ -5,10 +5,11 @@
 !.elasticbeanstalk/*.global.yml
 
 # Backend
-backend/static
-backend/templates
-db.sqlite3
+env
+static
+templates
 *.pyc
+db.sqlite3
 
 # Frontend
 bower_components
