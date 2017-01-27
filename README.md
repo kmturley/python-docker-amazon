@@ -46,6 +46,7 @@ If you like, you can use docker directly using:
 To connect to the running container use:
 
     sudo docker exec -i -t containerid /bin/bash
+    cat /var/log/uwsgi/uwsgi.log
 
 ## uWSGI (optional)
 
@@ -54,4 +55,4 @@ Run nginx + uWSGI server directly:
     virtualenv env
     source env/bin/activate
     pip install requirements.txt
-    uwsgi --http :8080 --module mysite.wsgi
+    uwsgi --http :8080 --wsgi-file mysite/wsgi.py --master --processes 1 --threads 15 --uid uwsgi --gid uwsgi --logto2 uwsgi.log
