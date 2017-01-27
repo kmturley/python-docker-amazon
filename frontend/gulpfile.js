@@ -2,8 +2,9 @@ var gulp = require('gulp');
 
 global.paths = {
     src: 'src',
-    static: '../static',
-    templates: '../templates',
+    static: '../mysite/static',
+    static2: '../static',
+    templates: '../mysite/templates',
     js: '/**/*.{js,tpl}',
     html: '/**/*.html'
 };
@@ -21,6 +22,7 @@ gulp.task('js', function () {
     'use strict';
     return gulp.src([global.paths.src + global.paths.js])
         .pipe(gulp.dest(global.paths.static))
+        .pipe(gulp.dest(global.paths.static2))
         .on('error', function (error) {
             console.error('js error: ' + error);
         });

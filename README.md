@@ -51,4 +51,7 @@ To connect to the running container use:
 
 Run nginx + uWSGI server directly:
 
+    virtualenv env
+    source env/bin/activate
+    pip install requirements.txt
     uwsgi --http :8080 --module mysite.wsgi

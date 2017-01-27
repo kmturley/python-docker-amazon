@@ -5,6 +5,7 @@
 !.elasticbeanstalk/*.global.yml
 
 # Backend
+env
 static
 templates
 *.pyc
