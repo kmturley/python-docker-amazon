@@ -1,4 +1,4 @@
-# python-docker-amazon
+# python-docker-amazon (Django)
 
 An example Python app inside a Docker container, which deploys to Amazon Elastic Beanstalk.
 
@@ -55,4 +55,4 @@ Run nginx + uWSGI server directly:
     virtualenv env
     source env/bin/activate
     pip install requirements.txt
-    uwsgi --http :8080 --wsgi-file mysite/wsgi.py --master --processes 1 --threads 15 --uid uwsgi --gid uwsgi --logto2 uwsgi.log
+    uwsgi --http :8080 --wsgi-file backend/wsgi.py --master --processes 1 --threads 15 --uid uwsgi --gid uwsgi --logto2 uwsgi.log

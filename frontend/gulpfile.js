@@ -2,9 +2,9 @@ var gulp = require('gulp');
 
 global.paths = {
     src: 'src',
-    static: '../mysite/static',
+    static: '../backend/static',
     static2: '../static',
-    templates: '../mysite/templates',
+    templates: '../backend/templates',
     js: '/**/*.{js,tpl}',
     html: '/**/*.html'
 };
