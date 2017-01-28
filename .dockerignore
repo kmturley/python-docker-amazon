@@ -2,4 +2,7 @@
 .elasticbeanstalk/*
 .git
 .gitignore
-.pyc
+env
+static
+templates
+*.pyc
