@@ -9,6 +9,10 @@ Install the Amazon Elastic Beanstalk Client
 
     brew install awsebcli
 
+Install the frontend dependencies
+
+    cd frontend
+    npm install
 
 ## Usage
 
@@ -19,7 +23,7 @@ Run the server locally using python:
 Run the frontend locally using gulp:
 
     cd frontend
-    gulp
+    npm start
 
 Or run the full server environment in Docker using:
 
