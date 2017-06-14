@@ -44,11 +44,11 @@ You can access the admin CMS at:
 
 Then run init and follow the steps to auth:
 
-    eb init
+    eb init --profile home
 
 You can deploy your project to the cloud using:
 
-    eb create environment-name
+    eb create environment-name --database
     eb status environment-name
     eb deploy environment-name
 
