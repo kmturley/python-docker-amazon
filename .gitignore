@@ -6,8 +6,8 @@
 
 # Backend
 env
-static
-templates
+backend/static
+backend/templates
 *.pyc
 db.sqlite3
 
