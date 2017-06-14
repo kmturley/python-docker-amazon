@@ -25,7 +25,7 @@ SECRET_KEY = '+py6fsz=dzk3la8j!z8=mn99=+j)+ut(2&-j87184syey#zypc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['test.sdxw2w9fx3.us-east-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['.sdxw2w9fx3.us-east-1.elasticbeanstalk.com']
 
 
 # Application definition
