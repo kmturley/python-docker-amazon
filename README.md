@@ -8,8 +8,9 @@ An example Python app inside a Docker container, which deploys to Amazon Elastic
 Install the backend dependencies (Django + Amazon Elastic Beanstalk Client)
 
     pip install -r requirements.txt
-    python manage.py createsuperuser
     python manage.py migrate
+    python manage.py collectstatic
+    python manage.py createsuperuser
 
 Install the frontend dependencies
 
