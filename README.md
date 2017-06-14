@@ -8,6 +8,8 @@ An example Python app inside a Docker container, which deploys to Amazon Elastic
 Install the backend dependencies (Django + Amazon Elastic Beanstalk Client)
 
     pip install -r requirements.txt
+    python manage.py createsuperuser
+    python manage.py migrate
 
 Install the frontend dependencies
 
@@ -18,18 +20,12 @@ Install the frontend dependencies
 
 Run the server locally using python:
 
-    python manage.py createsuperuser
-    python manage.py migrate
     python manage.py runserver 0.0.0.0:8080
 
 Run the frontend locally using gulp:
 
     cd frontend
     npm start
-
-Or run the full server environment in Docker using:
-
-    eb local run
 
 Then visit the address:
 
@@ -42,11 +38,15 @@ You can access the admin CMS at:
 
 ## Deployment
 
-Then run init and follow the steps to auth:
+Test the server environment locally using Docker:
+
+    eb local run
+
+Set Elastic Beanstalk project by following the steps:
 
     eb init --profile home
 
-You can deploy your project to the cloud using:
+Deploy your project to Elastic Beanstalk using:
 
     eb create environment-name --database
     eb status environment-name
@@ -64,6 +64,7 @@ To connect to the running container use:
 
     sudo docker exec -i -t containerid /bin/bash
     cat /var/log/uwsgi/uwsgi.log
+
 
 ## uWSGI (optional)
 
